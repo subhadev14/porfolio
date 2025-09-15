@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subhabrata Paul - Portfolio</title>
+  <style>
+    /* Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background: #f5f7fa; }
+    a { text-decoration: none; }
+
+    /* Layout */
+    header { background: linear-gradient(90deg, #222, #444); color: #fff; padding: 20px 0; }
+    header .container { display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: auto; padding: 0 20px; }
+    header h1 { font-size: 22px; font-weight: bold; letter-spacing: 1px; }
+    header nav a { margin-left: 20px; color: #fff; font-size: 15px; transition: 0.3s; }
+    header nav a:hover { color: #ffd369; }
+
+    .container { max-width: 1100px; margin: auto; padding: 40px 20px; }
+
+    /* Hero */
+    .hero { text-align: center; padding: 80px 20px; background: #fff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); margin-top: 20px; }
+    .hero h1 { font-size: 42px; margin-bottom: 15px; color: #222; }
+    .hero p { font-size: 18px; margin-bottom: 25px; color: #666; }
+    .hero a { display: inline-block; margin: 10px; padding: 12px 25px; border-radius: 30px; font-weight: bold; transition: 0.3s; }
+    .hero a:first-child { background: #222; color: #fff; }
+    .hero a:first-child:hover { background: #444; }
+    .hero a.secondary { background: #fff; border: 2px solid #222; color: #222; }
+    .hero a.secondary:hover { background: #222; color: #fff; }
+
+    /* Sections */
+    section h2 { font-size: 30px; margin-bottom: 30px; text-align: center; color: #222; }
+
+    /* Projects */
+    .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+    .project-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.08); transition: transform 0.3s, box-shadow 0.3s; }
+    .project-card:hover { transform: translateY(-6px); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
+    .project-card img { width: 100%; height: 180px; object-fit: cover; }
+    .project-content { padding: 20px; }
+    .project-content h3 { font-size: 20px; margin-bottom: 10px; color: #111; }
+    .project-content p { font-size: 14px; color: #555; margin-bottom: 12px; }
+    .project-links a { display: inline-block; margin: 5px 5px 0 0; padding: 6px 12px; background: #eee; border-radius: 6px; font-size: 13px; color: #0066cc; transition: 0.3s; }
+    .project-links a:hover { background: #ddd; }
+    .project-content small { display: block; margin-top: 10px; color: #999; }
+
+    /* About */
+    .about { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px; }
+    .about div { background: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+
+    /* Contact */
+    form { background: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); max-width: 700px; margin: auto; }
+    form label { display: block; margin-bottom: 8px; font-weight: bold; }
+    form input, form textarea { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 8px; font-size: 15px; }
+    form button { padding: 12px 25px; background: #222; color: #fff; border: none; border-radius: 8px; cursor: pointer; font-size: 16px; transition: 0.3s; }
+    form button:hover { background: #444; }
+
+    /* Footer */
+    footer { background: #222; color: #fff; text-align: center; padding: 25px; margin-top: 40px; }
+
+    .features {
+  font-size: 14px;
+  color: #444;
+  margin: 12px 0;
+  padding-left: 0;
+  list-style: none;
+}
+.features li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+.features li span {
+  display: inline-block;
+  width: 22px; /* fixed width so all icons align */
+  text-align: center;
+  margin-right: 6px;
+  font-size: 16px;
+}
+
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header style="background:#fff; box-shadow:0 2px 6px rgba(0,0,0,0.1); position:sticky; top:0; z-index:100;">
+  <div class="container" style="display:flex; justify-content:space-between; align-items:center; padding:10px 20px;">
+    
+    <!-- Logo / Profile -->
+    <div style="display:flex; align-items:center; gap:10px;">
+      <img src="https://sundarbansheritage.com/others/SubhabrataImage.png" alt="Subhabrata Paul" style="width:45px; height:45px; border-radius:50%; object-fit:cover; border:2px solid #0073e6;">
+      <div>
+        <h1 style="margin:0; font-size:1.1rem; color:#333;">Subhabrata Paul</h1>
+        <small style="color:#777;">Software Developer</small>
+      </div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav style="display:flex; gap:15px; align-items:center;">
+      <a href="#projects" style="color:#0073e6; text-decoration:none; font-weight:500;">Projects</a>
+      <a href="#about" style="color:#0073e6; text-decoration:none; font-weight:500;">About</a>
+      <a href="#contact" style="color:#0073e6; text-decoration:none; font-weight:500;">Contact</a>
+      <a href="#websites" style="color:#0073e6; text-decoration:none; font-weight:500;">Websites</a>
+      <a href="#upcoming" style="color:#0073e6; text-decoration:none; font-weight:500;">Upcoming</a>
+      <!-- Call Option -->
+      <a href="tel:+919123096629" style="background:#0073e6; color:#fff; padding:6px 12px; border-radius:6px; text-decoration:none; font-size:0.9rem;">📞 Call</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="container hero" style="text-align:center; padding:50px 20px;">
+  <img src="https://sundarbansheritage.com/others/SubhabrataImage.png" alt="Subhabrata Paul" style="width:100px; height:100px; border-radius:50%; object-fit:cover; border:3px solid #0073e6; margin-bottom:15px;">
+  
+  <h1 style="font-size:1.8rem; margin-bottom:5px;">Subhabrata Paul</h1>
+  <h2 style="font-size:1.2rem; margin-bottom:15px; color:#0073e6;">Software Developer</h2>
+  
+  <p style="max-width:500px; margin:0 auto 20px; color:#555; font-size:0.95rem;">
+  I design and develop scalable web & mobile applications using modern technologies like Laravel, React, React Native, Flutter, and Node.js.
+</p>
+  
+  <div style="display:flex; flex-wrap:wrap; gap:10px; justify-content:center;">
+    <a href="#contact" style="background:#0073e6; color:#fff; padding:10px 18px; border-radius:6px; text-decoration:none; font-size:0.9rem;">🚀 Hire Me</a>
+    <a href="#projects" class="secondary" style="background:#f1f1f1; color:#333; padding:10px 18px; border-radius:6px; text-decoration:none; font-size:0.9rem;">📂 See Projects</a>
+    <a href="#websites" style="background:#f1f1f1; color:#333; padding:10px 18px; border-radius:6px; text-decoration:none; font-size:0.9rem;">🌐 Websites</a>
+    <a href="#upcoming" style="background:#f1f1f1; color:#333; padding:10px 18px; border-radius:6px; text-decoration:none; font-size:0.9rem;">📌 Upcoming</a>
+  </div>
+</section>
+
+
+
+  <!-- Projects -->
+  <section id="projects" class="container">
+    <h2>Featured Projects</h2>
+    <div class="projects">
+      <!-- Project 1 -->
+<div class="project-card">
+  <img src="https://play-lh.googleusercontent.com/iT0LP7rbjLHQloFlKS2yNe_6lKzstbDlXF2Q5lRh8tE427CIyWAuyZvklo99_MqhP30=w5120-h2880-rw" alt="Krishi Vikas App Screenshot">
+  <div class="project-content">
+    <h3>Multivendor Marketplace - Krishi Vikas</h3>
+    <p>A digital marketplace for farmers and agri-businesses.</p>
+    <ul class="features">
+      <li>🛒 Enlist product to app</li>
+      <li>✅ Product verification</li>
+      <li>🔔 Notifications system</li>
+      <li>🤝 Connect buyers & sellers</li>
+      <li>💳 Subscription module</li>
+      <li>📦 Wholeseller support</li>
+      <li>💰 Integrated payment gateway</li>
+      <li>📍 Nearby seller discovery</li>
+      <li>📊 Admin reports & analytics</li>
+    </ul>
+    <div class="project-links">
+      <a href="https://krishivikas.com/" target="_blank">🌐 Website</a>
+      <a href="https://play.google.com/store/search?q=krishi+vikas+app&c=apps" target="_blank">📱 Play Store (1L+)</a>
+      <a href="https://apps.apple.com/in/app/krishi-vikas-udyog-kisan-app/id6449253442" target="_blank">🍎 Apple Store</a>
+    </div>
+    <small>Tech Stack: Laravel, React.js, Flutter</small>
+  </div>
+</div>
+
+<!-- Project 2 -->
+<div class="project-card">
+  <img src="https://play-lh.googleusercontent.com/BXqtkKjsag4jhs1BWoR7WS3A0YX9Z8FYJx-Kw7cPGr82jXHUPwIPXb9LyliVLTEjJB2p4GVV0xvkkp8oYK4aqw=w480-h960-rw" alt="Doctor Booking App Screenshot">
+  <div class="project-content">
+    <h3>Mental Therapy App</h3>
+    <p>Appointment booking system with separate apps for users & agents, plus an admin panel.</p>
+    <ul class="features">
+      <li>👤 User books a therapist</li>
+      <li>🕒 Slot booking system</li>
+      <li>💳 Secure payment integration</li>
+      <li>💬 Chat, 🎙️ Audio & 🎥 Video call</li>
+      <li>🌿 Remedies & consultation tracking</li>
+      <li>💸 Refund system</li>
+      <li>🔔 Notifications for users & therapists</li>
+      <li>⏰ Booking reminders</li>
+    </ul>
+    <div class="project-links">
+      <a href="https://play.google.com/store/apps/details?id=com.myjoie.patientapp" target="_blank">👤 User App</a>
+      <a href="https://play.google.com/store/apps/details?id=com.myjoie.therapistapp" target="_blank">🧑‍⚕️ Therapist App</a>
+    </div>
+    <small>Tech Stack: Laravel-Blade, React Native</small>
+  </div>
+</div>
+
+
+<!-- Project 3 -->
+<div class="project-card">
+  <img src="https://play-lh.googleusercontent.com/erzOAi55NaJ8M7wkzEi9yGS3DnaUHzw9wk-ORFV7ffVfeliiJfbit7pZKQezpTiEkYDV=w1052-h592-rw" alt="Sensea Maritime Academy App Screenshot">
+  <div class="project-content">
+    <h3>Institute Management System - Sensea Maritime Academy</h3>
+    <p>Complete learning & management platform with apps for Students & Faculty, plus Admin Panel.</p>
+    <ul class="features">
+      <li>🔑 Login & verification</li>
+      <li>📚 Course purchase with installment system</li>
+      <li>👩‍🏫 Class & faculty allocation</li>
+      <li>✅ Attendance management</li>
+      <li>📂 Study materials access</li>
+      <li>📝 Online exams</li>
+      <li>🎓 Certificate provision</li>
+    </ul>
+    <div class="project-links">
+      <a href="https://senseamarine.com/" target="_blank">🌐 Website</a>
+      <a href="https://play.google.com/store/search?q=sensea+maritime+academy&c=apps" target="_blank">📱 Play Store (10k+)</a>
+      <a href="https://apps.apple.com/in/app/sensea-maritime-academy/id6670214863" target="_blank">🍎 Apple Store</a>
+      <a href="https://play.google.com/store/apps/details?id=com.faculty.sensea&hl=en" target="_blank">👨‍🏫 Faculty App</a>
+    </div>
+    <small>Tech Stack: CodeIgniter, Flutter</small>
+  </div>
+</div>
+
+<!-- Project 4 -->
+<div class="project-card">
+  <img src="https://play-lh.googleusercontent.com/AHiUYG9H7yBusq1a1SP-hPbOEOKu5kCMOJnLa501kGt-XDfEdSFHszK1UvlHjJx8RK4=w480-h960-rw" alt="Abybaby Attendance App Screenshot">
+  <div class="project-content">
+    <h3>Abybaby Attendance</h3>
+    <p>Smart attendance app with location-based verification and reporting.</p>
+    <ul class="features">
+      <li><span>📝</span>Employee Register & Login</li>
+      <li><span>📍</span>Mark Attendance with Location verification</li>
+      <li><span>📊</span>Juniors Reporting</li>
+    </ul>
+    <div class="project-links">
+      <a href="https://play.google.com/store/apps/details?id=com.abybaby.attendance_hrms" target="_blank">📱 Play Store</a>
+    </div>
+    <small>Tech Stack: Laravel, Flutter</small>
+  </div>
+</div>
+
+
+<!-- Project 5 -->
+<div class="project-card">
+  <img src="https://play-lh.googleusercontent.com/HFw46vLwk8EB69-bo6L4XSPDu1QDCcAJ4QKA17YMjvCVjpxUL-oPRu1AujuaQl0T2g=w1052-h592-rw" alt="Hello Priya HRMS Screenshot">
+  <div class="project-content">
+    <h3>HRMS - Hello Priya</h3>
+    <p>HRMS solution with attendance, performance tracking, and payroll integration.</p>
+    <ul class="features">
+      <li><span>⏱️</span>Employee In/Out time record</li>
+      <li><span>⭐</span>Employee Performance tracking</li>
+      <li><span>📊</span>Attendance Reports</li>
+      <li><span>💰</span>Pay Scale & Salary Slip generation</li>
+    </ul>
+    <div class="project-links">
+      <a href="https://play.google.com/store/apps/details?id=com.abybaby.attendance_hrms" target="_blank">📱 Play Store</a>
+    </div>
+    <small>Tech Stack: Laravel, Flutter</small>
+  </div>
+</div>
+
+<!-- Project 6 -->
+<div class="project-card">
+  <img src="https://play-lh.googleusercontent.com/0M7LxJMP0wrzr1p0gwuO4IPP0WfBkiYqHDUr3Y2CxFWjk1veEjhz_F7VsKfNDCt_Ud0=w480-h960-rw" alt="Project Management System Screenshot">
+  <div class="project-content">
+    <h3>Project Management System</h3>
+    <p>End-to-end project monitoring system with role-based access and reporting.</p>
+    <ul class="features">
+      <li><span>📦</span>Project Enlistment</li>
+      <li><span>🧾</span>PO Generation</li>
+      <li><span>📈</span>Project Status Management</li>
+      <li><span>📊</span>Comprehensive Reports</li>
+      <li><span>👥</span>Admin & Role Management System</li>
+    </ul>
+    <div class="project-links">
+      <a href="https://play.google.com/store/apps/details?id=com.abybaby.pms" target="_blank">📱 Play Store</a>
+    </div>
+    <small>Tech Stack: Laravel, Flutter</small>
+  </div>
+</div>
+
+<!-- Project 7 -->
+<div class="project-card">
+  <img src="https://play-lh.googleusercontent.com/dwe2ffE10PKKqHBn-J6WwHutOeaL52BwZTAIbRUJ0wo6Fe859t3FK7Fa5QdgdIQAug=w480-h960-rw" alt="ViewSonic India App Screenshot">
+  <div class="project-content">
+    <h3>ViewSonic India</h3>
+    <p>Partner verification and rewards management app for sales teams.</p>
+    <ul class="features">
+      <li><span>🔑</span>Login & Verification</li>
+      <li><span>✅</span>T3 Partners Verification</li>
+      <li><span>📊</span>Sales Records Storage</li>
+      <li><span>🎁</span>Reward & Gift Management</li>
+    </ul>
+    <div class="project-links">
+      <a href="https://play.google.com/store/apps/details?id=finchplay.viewsonicpartners.in" target="_blank">📱 Play Store</a>
+    </div>
+    <small>Tech Stack: Laravel, Flutter</small>
+  </div>
+</div>
+
+
+<!-- Project 8 -->
+<div class="project-card">
+  <img src="https://play-lh.googleusercontent.com/XCt_JmTsyUycHDEKPiIiw2gaB5Y9RMFcKmwGgYbpCvhBUxNHoIIjZdAKqLbzCz6VlPE=w5120-h2880-rw" alt="Florence Institution App Screenshot">
+  <div class="project-content">
+    <h3>School Management System - Florence Institution</h3>
+    <p>Comprehensive school ERP app for students, teachers, and parents.</p>
+    <ul class="features">
+      <li><span>📝</span>Attendance</li>
+      <li><span>📅</span>Time Table</li>
+      <li><span>📚</span>Homework Management</li>
+      <li><span>📢</span>Notice Board</li>
+      <li><span>🏖️</span>Holiday Calendar</li>
+      <li><span>📝</span>Exam & Results</li>
+    </ul>
+    <div class="project-links">
+      <a href="https://play.google.com/store/apps/details?id=com.florence.eschool" target="_blank">📱 Play Store</a>
+    </div>
+    <small>Tech Stack: Laravel, Flutter</small>
+  </div>
+</div>
+
+
+<!-- Project 9 -->
+<div class="project-card">
+  <img src="https://play-lh.googleusercontent.com/E-lHipw4UOaOae-5tFQwzakBZlir8EItU0FMcCI3edEYJLh9LHt2CRLmzS2Tm9OeKeU=w5120-h2880-rw" alt="Chaalakya Event Management App Screenshot">
+  <div class="project-content">
+    <h3>Event Management App - Chaalakya</h3>
+    <p>Event and catering management app for bookings and client services.</p>
+    <ul class="features">
+      <li><span>🎉</span>Event & Catering Services</li>
+      <li><span>📝</span>Requirement Collection</li>
+      <li><span>🤝</span>Service Provision</li>
+      <li><span>⭐</span>Client Ratings</li>
+    </ul>
+    <div class="project-links">
+      <a href="https://play.google.com/store/apps/details?id=com.event.chaalakya" target="_blank">📱 Play Store</a>
+    </div>
+    <small>Tech Stack: Laravel, Flutter</small>
+  </div>
+</div>
+
+<!-- Project 10 -->
+<div class="project-card">
+  <img src="https://play-lh.googleusercontent.com/IywU3-b_wrX5iI1HsvjLFkifwvuhoTowvO4Danjg9cqPA_cY2e_S9lTPOI9lJduHhoU=w480-h960-rw" alt="Halofoto App Screenshot">
+  <div class="project-content">
+    <h3>Halofoto App</h3>
+    <p>Digital product management and customer engagement platform with wholesale support.</p>
+    <ul class="features">
+      <li><span>📦</span> Product Model Details</li>
+      <li><span>🏆</span> User Points System</li>
+      <li><span>💸</span> Coupons & Discounts</li>
+      <li><span>🎯</span> Redeem System</li>
+      <li><span>🛡️</span> Warranty Management</li>
+      <li><span>🏪</span> Wholeseller App Support</li>
+    </ul>
+    <div class="project-links">
+      <a href="https://play.google.com/store/search?q=halofoto&c=apps&hl=en_IN" target="_blank">📱 Play Store</a>
+    </div>
+    <small>Tech Stack: Laravel, React Native</small>
+  </div>
+</div>
+
+
+
+
+
+    </div>
+  </section>
+
+  <!-- Website Projects -->
+<section id="websites" class="container">
+  <h2>Website Projects</h2>
+  <div class="projects">
+    
+
+    <!-- Project 5 - Business Listing Website -->
+<div class="project-card">
+  <img src="https://demand10.com/images/logo.png" alt="Business Listing Website Screenshot">
+  <div class="project-content">
+    <h3>Search Engine Application</h3>
+    <p>A platform for businesses to list their services, manage subscriptions, and generate leads.</p>
+    <ul class="features">
+      <li>🏢 Business Name Listing</li>
+      <li>💳 User Subscriptions</li>
+      <li>✅ Claim Business</li>
+      <li>📈 Leads Generation</li>
+    </ul>
+    <div class="project-links">
+      <a href="https://demand10.com/" target="_blank">🌐 Website</a>
+    </div>
+    <small><strong>Tech Stack:</strong> Node.js, Express, React.js, MySQL</small>
+  </div>
+</div>
+
+
+    <!-- Project 1 -->
+    <div class="project-card">
+      <img src="https://makemyevents.org/public/img/MMS.png" alt="Sports Event Hosting Screenshot">
+      <div class="project-content">
+        <h3>Sports Event Hosting</h3>
+        <p>Platform for hosting and managing sports events with registrations and schedules.</p>
+        <div class="project-links">
+          <a href="https://makemyevents.org/" target="_blank">🌐 Website</a>
+        </div>
+        <small>Tech Stack: Laravel</small>
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-card">
+      <img src="https://sundarbansheritage.com/assets/images/Sundarban_bann_1.png" alt="Tour & Travel Screenshot">
+      <div class="project-content">
+        <h3>Tour & Travel</h3>
+        <p>Travel website showcasing tour packages, itineraries, and booking options.</p>
+        <div class="project-links">
+          <a href="https://sundarbansheritage.com/" target="_blank">🌐 Website</a>
+        </div>
+        <small>Tech Stack: Core PHP</small>
+      </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-card">
+      <img src="https://anontolota.com/img1/home-view.webp" alt="Hotel Website Screenshot">
+      <div class="project-content">
+        <h3>Hotel Website</h3>
+        <p>Interactive hotel website with room listings, booking forms, and customer contact features.</p>
+        <div class="project-links">
+          <a href="https://anontolota.com/" target="_blank">🌐 Website</a>
+        </div>
+        <small>Tech Stack: Core PHP</small>
+      </div>
+    </div>
+
+    <!-- Project 4 -->
+    <div class="project-card">
+      <img src="https://vaidheekibackup.sundarbansheritage.com/wp-content/uploads/2025/03/blog-2.png" alt="Real Estate Company Screenshot">
+      <div class="project-content">
+        <h3>Real Estate Company</h3>
+        <p>Responsive real estate website with property listings and client inquiry forms.</p>
+        <div class="project-links">
+          <a href="https://vaidheekibackup.sundarbansheritage.com/" target="_blank">🌐 Website</a>
+        </div>
+        <small>Tech Stack: WordPress</small>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Upcoming Projects -->
+<section id="upcoming" class="container">
+  <h2>Upcoming Projects</h2>
+  <div class="projects">
+    
+    <!-- Project 1 -->
+    <div class="project-card">
+      <img src="http://103.191.209.121/kaya/dev/public/uploads/20240529/eb41ced1ccef07fcef184ad2ac20d85e.png" alt="Multi-Vendor Marketplace E-commerce Screenshot">
+      <div class="project-content">
+        <h3>Multi-Vendor Marketplace E-commerce Shipping solution</h3>
+        <p>A scalable e-commerce platform with panels for wholesalers, retailers, drivers, and admin management.</p>
+        <ul class="features">
+          <li>🔑 Authentication & Authorization</li>
+          <li>🏪 Wholeseller Panel</li>
+          <li>🛍️ Retailer Panel</li>
+          <li>🛒 Add To Cart</li>
+          <li>💳 Buy Now & Payment Gateway</li>
+          <li>🚚 Shipping Management & Driver App</li>
+          <li>🗺️ Google Maps Integration</li>
+          <li>🔔 Firebase Notifications</li>
+          <li>🧑‍💻 Admin Panel</li>
+        </ul>
+        <div class="project-links">
+          <a href="http://103.191.209.121/kaya/frontend/" target="_blank">🌐 Website</a>
+        </div>
+        <small>Tech Stack: Laravel, React Native, React Js, Mysql</small>
+      </div>
+    </div>
+
+<!-- Project 2 - Shipping App -->
+<div class="project-card">
+  <img src="http://103.191.209.121/kaya/dev/public/uploads/20240529/eb41ced1ccef07fcef184ad2ac20d85e.png" alt="Shipping App Screenshot">
+  <div class="project-content">
+    <h3>Shipping App</h3>
+    <p>An app for company drivers to manage orders with notifications, tracking, and reviews.</p>
+    <ul class="features">
+      <li>🔑 Login & Register as Driver</li>
+      <li>📲 Incoming Orders & Alerts via Notification</li>
+      <li>📦 Order Process Steps</li>
+      <li>🗺️ Google Maps Integration</li>
+      <li>⭐ Review & Rating</li>
+    </ul>
+    <div class="project-links">
+      <button onclick="openImageSlider()">🖼️ View Screenshots</button>
+    </div>
+    <small>Tech Stack: Laravel, React Native</small>
+  </div>
+
+
+</div>
+
+<!-- Project 3 - Astrology App -->
+<div class="project-card">
+  <img src="https://sundarbansheritage.com/others/astro1.jpg" alt="Astrology App Screenshot">
+  <div class="project-content">
+    <h3>Astrology App</h3>
+    <p>Connect with astrologers, perform online puja bookings, and access astrology e-commerce services.</p>
+    <ul class="features">
+      <li>🔮 Talk to Astrologer</li>
+      <li>💬 Chat / 🎙️ Audio Call</li>
+      <li>💳 Recharge & Runtime Payment Deduction</li>
+      <li>🛒 Astro E-commerce System</li>
+      <li>📿 Book for a Puja</li>
+      <li>📚 Astrology Courses</li>
+    </ul>
+    <div class="project-links">
+      <button onclick="openAstroSlider()">🖼️ View Screenshots</button>
+    </div>
+    <small>Tech Stack: Laravel, React Native</small>
+  </div>
+
+
+</div>
+
+
+<!-- Project 4 - Multi-Agent Tour & Travel Booking App -->
+<div class="project-card">
+  <img src="https://sundarbansheritage.com/others/tour1.jpg" alt="Tour & Travel App Screenshot">
+  <div class="project-content">
+    <h3>Multi-Agent Tour & Travel Booking App</h3>
+    <p>Book tours, manage travel agents, chat or call via Agora, and handle payments with cancellations & refunds.</p>
+    <ul class="features">
+      <li>📱 OTP-Based Login Authentication</li>
+      <li>🗺️ Check & Book Travel Packages</li>
+      <li>💬 Chat / 🎙️ Audio Call via Agora</li>
+      <li>💳 Payment & Booking Management</li>
+      <li>❌ Cancelation & Refund System</li>
+      <li>🛎️ Agent Booking Management & Notifications</li>
+    </ul>
+    <div class="project-links">
+      <button onclick="openTourSlider()">🖼️ View Screenshots</button>
+    </div>
+    <small>Tech Stack: Laravel, React Native</small>
+  </div>
+
+
+</div>
+
+
+  <!-- Lightbox Modal -->
+<div id="lightbox" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); justify-content:center; align-items:center; z-index:1000;">
+  <span style="position:absolute; top:20px; right:30px; font-size:30px; cursor:pointer; color:#fff;" onclick="closeLightbox()">&times;</span>
+  <div style="max-width:90%; max-height:90%; display:flex; gap:10px; overflow-x:auto;">
+    <img src="https://sundarbansheritage.com/others/shipper1.jpg" style="height:80vh; border-radius:8px;">
+    <img src="https://sundarbansheritage.com/others/shipper2.jpg" style="height:80vh; border-radius:8px;">
+    <img src="https://sundarbansheritage.com/others/shipper3.jpg" style="height:80vh; border-radius:8px;">
+    <img src="https://sundarbansheritage.com/others/shipper4.jpg" style="height:80vh; border-radius:8px;">
+  </div>
+</div>
+
+<script>
+  function openImageSlider() {
+    document.getElementById('lightbox').style.display = 'flex';
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').style.display = 'none';
+  }
+</script>
+
+
+  <!-- Astrology App Lightbox -->
+<div id="astroLightbox" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); justify-content:center; align-items:center; z-index:1000;">
+  <span style="position:absolute; top:20px; right:30px; font-size:30px; cursor:pointer; color:#fff;" onclick="closeAstroSlider()">&times;</span>
+  <div style="max-width:90%; max-height:90%; display:flex; gap:10px; overflow-x:auto;">
+    <img src="https://sundarbansheritage.com/others/astro1.jpg" style="height:80vh; border-radius:8px;">
+    <img src="https://sundarbansheritage.com/others/astro2.jpg" style="height:80vh; border-radius:8px;">
+    <img src="https://sundarbansheritage.com/others/astro3.jpg" style="height:80vh; border-radius:8px;">
+    <img src="https://sundarbansheritage.com/others/astro4.jpg" style="height:80vh; border-radius:8px;">
+  </div>
+</div>
+
+<script>
+  function openAstroSlider() {
+    document.getElementById('astroLightbox').style.display = 'flex';
+  }
+  function closeAstroSlider() {
+    document.getElementById('astroLightbox').style.display = 'none';
+  }
+</script>
+
+
+  <!-- Tour & Travel App Lightbox -->
+<div id="tourLightbox" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); justify-content:center; align-items:center; z-index:1000;">
+  <span style="position:absolute; top:20px; right:30px; font-size:30px; cursor:pointer; color:#fff;" onclick="closeTourSlider()">&times;</span>
+  <div style="max-width:90%; max-height:90%; display:flex; gap:10px; overflow-x:auto;">
+    <img src="https://sundarbansheritage.com/others/tour1.jpg" style="height:80vh; border-radius:8px;">
+    <img src="https://sundarbansheritage.com/others/tour2.jpg" style="height:80vh; border-radius:8px;">
+    <img src="https://sundarbansheritage.com/others/tour3.jpg" style="height:80vh; border-radius:8px;">
+    <img src="https://sundarbansheritage.com/others/tour4.jpg" style="height:80vh; border-radius:8px;">
+  </div>
+</div>
+
+<script>
+  function openTourSlider() {
+    document.getElementById('tourLightbox').style.display = 'flex';
+  }
+  function closeTourSlider() {
+    document.getElementById('tourLightbox').style.display = 'none';
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+  </div>
+</section>
+
+
+
+
+<!-- About -->
+<section id="about" class="container" style="padding:60px 20px; background:#f9f9f9; border-radius:12px; margin-bottom:50px;">
+  <h2 style="text-align:center; font-size:2rem; margin-bottom:30px; color:#333;">👨‍💻 About Me</h2>
+  <div style="display:flex; flex-wrap:wrap; gap:40px; justify-content:center;">
+    
+    <!-- Skills -->
+    <div style="flex:1; min-width:280px; background:#fff; padding:20px; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.1);">
+      <h3 style="margin-bottom:15px; color:#444;">⚡ Skills</h3>
+      <ul style="list-style:none; padding:0; margin:0; line-height:1.8;">
+        <li>🔹 Laravel & PHP</li>
+        <li>🔹 Node.js, Express.js, Knex, Objection, Prisma</li>
+        <li>🔹 React & React Native</li>
+        <li>🔹 Flutter</li>
+        <li>🔹 MySQL, PostgreSQL, MongoDB, Redis</li>
+      </ul>
+    </div>
+
+    <!-- Process -->
+    <div style="flex:1; min-width:280px; background:#fff; padding:20px; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.1);">
+      <h3 style="margin-bottom:15px; color:#444;">🛠️ Process</h3>
+      <ol style="margin:0; padding-left:20px; line-height:1.8;">
+        <li>Discuss requirements</li>
+        <li>Plan migrations & tests</li>
+        <li>Implement & optimize</li>
+        <li>Deploy & monitor</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="container" style="padding:60px 20px;">
+  <h2 style="text-align:center; font-size:2rem; margin-bottom:30px; color:#333;">📩 Contact Me</h2>
+  <div style="display:flex; flex-wrap:wrap; gap:40px; justify-content:center; align-items:flex-start;">
+
+    <!-- Contact Info -->
+    <div style="flex:1; min-width:320px; max-width:600px; background:#fff; padding:30px; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.1); text-align:center;">
+      <h3 style="margin-bottom:20px; color:#444;">📞 Get in Touch</h3>
+      <p><strong>Email:</strong> <a href="mailto:paul.subhabrata.dev@gmail.com">paul.subhabrata.dev@gmail.com</a></p>
+      <p><strong>Phone:</strong> <a href="tel:+919123096629">+91 91230 96629</a></p>
+      <p><strong>WhatsApp:</strong> <a href="https://wa.me/919123096629" target="_blank">Chat on WhatsApp</a></p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/subhadev14" target="_blank">github.com/subhadev14</a></p>
+      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/subhabrata-paul-829235360" target="_blank">linkedin.com/in/subhabrata-paul</a></p>
+    </div>
+
+  </div>
+</section>
+
+
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Subhabrata Paul. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
